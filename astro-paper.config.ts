@@ -11,7 +11,7 @@ export default defineAstroPaperConfig({
     lang: "en",
     timezone: "Etc/UTC",
     dir: "ltr",
-    base: "/antp0p.github.io"
+    
   },
   posts: {
     perPage: 4,
