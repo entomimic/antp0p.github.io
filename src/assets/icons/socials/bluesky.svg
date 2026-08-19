@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="bluesky.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="15.664759"
+     inkscape:cx="-4.085604"
+     inkscape:cy="3.5429847"
+     inkscape:window-width="2560"
+     inkscape:window-height="1334"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true">
+    <sodipodi:guide
+       position="44.320289,304.83712"
+       orientation="1,0"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="39.996358,285.51456"
+       orientation="1,0"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-14.086556,257.00364"
+       orientation="0,-1"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="16.457846,267.68222"
+       orientation="0,-1"
+       id="guide4"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="layer 2">
+    <g
+       inkscape:label="layer 1"
+       id="layer1">
+      <g
+         id="g4"
+         style="stroke:currentColor;stroke-width:2;stroke-dasharray:none;stroke-opacity:1">
+        <path
+           style="fill:currentColor;fill-opacity:0;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="m 11.786863,12.339938 c 0,0 -0.396692,-3.7112463 -4.9040311,-5.8917273 -3.8824326,-1.878176 -3.3273987,-0.675615 -3.3273987,-0.675615 0,0 0.9645517,5.5757003 1.9592817,6.7899223 1.006899,1.229078 3.2566834,1.255567 3.2566834,1.255567 L 5.435645,15.835202 c 0,0 -0.2983149,1.475834 1.5552486,2.578395 2.625255,1.561588 3.4018294,1.2118 4.5870124,-4.423752"
+           id="path4"
+           sodipodi:nodetypes="cscsccsc" />
+        <use
+           x="0"
+           y="0"
+           xlink:href="#path4"
+           id="use4"
+           transform="matrix(-1,0,0,1,23.533338,0.02256999)"
+           style="stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+      </g>
+    </g>
+  </g>
+</svg>
