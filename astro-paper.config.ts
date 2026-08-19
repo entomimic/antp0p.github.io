@@ -2,7 +2,7 @@ import { defineAstroPaperConfig } from "./src/types/config";
 
 export default defineAstroPaperConfig({
   site: {
-    url: "https://entomimic.github.io/",
+    url: "https://antp0p.github.io/",
     title: "antp0p's Blog; or, Insectness'",
     description: "antp0p's tech blog, discussing game development & game design, and more.",
     author: "antp0p",
