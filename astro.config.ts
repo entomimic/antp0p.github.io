@@ -60,8 +60,17 @@ export default defineConfig({
   },
   fonts: [
     {
-      name: "Merriweather",
-      cssVariable: "--font-merriweather",
+      name: "Atkinson Hyperlegible",
+      cssVariable: "--font-atkinson-hyperlegible",
+      provider: fontProviders.google(),
+      fallbacks: ["monospace"],
+      weights: [300, 400, 500, 600, 700],
+      styles: ["normal", "italic"],
+      formats: ["woff", "ttf"],
+    },
+    {
+      name: "Montserrat",
+      cssVariable: "--font-montserrat",
       provider: fontProviders.google(),
       fallbacks: ["monospace"],
       weights: [300, 400, 500, 600, 700],

@@ -35,7 +35,7 @@ export default {
   },
   footer: {
     copyright: "Copyright",
-    allRightsReserved: "All rights reserved.",
+    allRightsReserved: "antp0p | Content licensed under",
   },
   pages: {
     tagTitle: "Tag",
@@ -45,10 +45,10 @@ export default {
     tagsDesc: "All the tags used in posts.",
 
     postsTitle: "Posts",
-    postsDesc: "All the articles I've posted.",
+    postsDesc: "All the articles antp0p has posted.",
 
     archivesTitle: "Archives",
-    archivesDesc: "All the articles I've archived.",
+    archivesDesc: "All the articles antp0p has archived.",
 
     searchTitle: "Search",
     searchDesc: "Search any article ...",

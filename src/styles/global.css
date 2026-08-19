@@ -2,7 +2,6 @@
 @import "./theme.css";
 @import "./typography.css";
 @import "rehype-callouts/theme/obsidian";
-
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @layer base {
@@ -20,14 +19,15 @@
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+  
 }
 
 @utility max-w-app {
-  @apply max-w-3xl;
+  @apply max-w-none;
 }
 
 @utility app-layout {
-  @apply max-w-app mx-auto w-full px-4;
+  @apply max-w-app prose-lg leading-normal mx-auto w-full px-4 sm:px-6 md:max-w-3xl md:px-8 2xl:prose-xl 2xl:max-w-[60%] ;
 }
 
 @utility active-nav {
@@ -36,4 +36,16 @@
 
 :target {
   scroll-margin-block: 1rem;
+}
+
+/* h1, h2, h3, h4, h5, h6,
+  .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+    font-family: var(--font-app-heading);
+  } */
+:root {
+  --font-app-heading: "Lora", serif;
+}
+h1, h2, h3, h4, h5, h6,
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  font-family: var(--font-app-heading);
 }
