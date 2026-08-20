@@ -145,13 +145,13 @@ export const GET: APIRoute = async context => {
       embedFont: true,
       fonts: [
         {
-          name: "Google Sans Code",
+          name: "Atkinson Hyperlegible",
           data: regularData,
           weight: 400,
           style: "normal",
         },
         {
-          name: "Google Sans Code",
+          name: "Atkinson Hyperlegible",
           data: boldData,
           weight: 700,
           style: "normal",

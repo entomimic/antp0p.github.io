@@ -19,6 +19,10 @@ import {
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import config from "./astro-paper.config";
 
+import GDScript from "./src/grammars/GDScript.tmLanguage.json"
+import GDShader from "./src/grammars/GDShader.tmLanguage.json"
+import GDResource from "./src/grammars/GDResource.tmLanguage.json"
+
 export default defineConfig({
   site: config.site.url,
   integrations: [
@@ -44,14 +48,22 @@ export default defineConfig({
       rehypePlugins: [rehypeCallouts],
     }),
     shikiConfig: {
-      themes: { light: "min-light", dark: "night-owl" },
+      themes: {
+        light: "light-plus", dark: "dark-plus",
+      },
       defaultColor: false,
+      
       wrap: false,
       transformers: [
         transformerFileName({ style: "v2", hideDot: false }),
         transformerNotationHighlight(),
         transformerNotationWordHighlight(),
         transformerNotationDiff({ matchAlgorithm: "v3" }),
+      ],
+      langs: [
+        GDScript as any,
+        GDShader,
+        GDResource,
       ],
     },
   },
