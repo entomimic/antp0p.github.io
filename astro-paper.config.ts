@@ -31,7 +31,7 @@ export default defineAstroPaperConfig({
   },
   socials: [
     { name: "github",   url: "https://github.com/entomimic" },
-    { name: "bluesky",        url: "https://bsky.app/profile/antp0p.bsky.social" },
+    { name: "bluesky",        url: "https://bsky.app/profile/entomimic.github.io" },
     { name: "bandcamp", url: "https://insectness.bandcamp.com/" },
   ],
   shareLinks: [
