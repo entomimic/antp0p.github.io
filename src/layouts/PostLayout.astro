@@ -1,7 +1,8 @@
 ---
 import Layout from "./Layout.astro";
 import config from "@/config";
-
+import TableOfContents from "../components/TOC.astro";
+import type { MarkdownHeading } from "astro";
 type Props = {
   title?: string;
   description?: string;
@@ -9,11 +10,12 @@ type Props = {
   canonicalURL?: string;
   pubDatetime?: Date;
   modDatetime?: Date | null;
+  headings?: MarkdownHeading[];
 };
 
 const { site } = config;
 
-const { title, description, ogImage, canonicalURL, pubDatetime, modDatetime } =
+const { title, description, ogImage, canonicalURL, pubDatetime, modDatetime, headings = []} =
   Astro.props;
 
 const structuredData = {
@@ -61,6 +63,16 @@ const structuredData = {
       set:html={JSON.stringify(structuredData)}
     />
   </Fragment>
-
-  <slot />
+  <div >
+  
+    <aside>
+      <TableOfContents headings={headings} />
+    </aside>
+  
+    <article id="article">
+    
+      <slot />
+    </article>
+  
+</div>
 </Layout>

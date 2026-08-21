@@ -14,11 +14,11 @@ description: Or, the evolution of antp0p the larva
 
 *The Ant Game* recently underwent its 4th major refactor. Let's take a look at how it came into existence over the course of a year and a half in the hands of a larva named antp0p...
 
-## 0. How it all began... A winter day in early 2025
+## 0. How It All Began... A Winter Day in Early 2025
 
 antp0p just didn't understand nodes and trees; that's all. The only thing antp0p knew was a bubble sort in Python. Movement code was copied straight from the [Official Godot 4.3 Documentation](https://docs.godotengine.org/en/4.3/index.html). After creating and instantiating bullet and player scenes, antp0p discovered the character could actually fire. Then came the step-by-step construction of the TileMap. Back then, the joy was simple.
 
-## 1. The world of if-else: What is an architecture?
+## 1. The World of If-Else: What is an Architecture?
 
 The character was moving, but the animations weren't playing correctly. For example, when firing while walking, the character would slide along with the gun held up. That's obviously wrong, so antp0p added this:
 
@@ -32,7 +32,7 @@ Clearly, this was incredibly hard to scale and relied heavily on specific inputs
 
 Anyway, antp0p the Lazy Dev found FSMs while searching online.
 
-## 2. The first refactor: FSMs and the Factory Pattern
+## 2. The First Refactor: FSMs and the Factory Pattern
 
 This was the first real encounter with **OOP** and the concept of **state machines**. GDQuest recommended [an approach](https://www.gdquest.com/tutorial/godot/design-patterns/finite-state-machine/) where each state exists as a node under the state machine, inheriting from a base state class. antp0p followed this advice and dutifully wrote `enter()` and `exit()` methods for every derived class.
 
@@ -87,8 +87,8 @@ What happens when the player releases `"Walk"`:
 
 - The `InputDriver` receives the `pressed=false` input (i.e., release).
 - The `InputDriver` matches the action and emits a signal.
-- The `ActionHandler` packages this as an "undo" command argument and sends it to the ActionParser for execution.
-- The `StateMachine` reads the input, tracks timing, and updates the state. AnimControl updates the animation.
+- The `ActionHandler` packages this as an "undo" command argument and sends it to the `ActionParser` for execution.
+- The `StateMachine` reads the input, tracks timing, and updates the state. `AnimControl` updates the animation.
 
 
 That was a massive, roundabout process! The `ActionParser` was also completely superfluous; a conclusion antp0p eventually reached as well. Also, the approach was unstable and cumbersome: the "undo" function relied merely on reversing the argument values rather than having a system to store and clear currently executing tasks. 
@@ -136,7 +136,7 @@ Debugging suggested that an action activated in the previous loop hadn't been ad
 
 antp0p's solution was to introduce a "pending" array: once the input pipeline activates an action, it is immediately added to this pending array. The predicate then evaluates a combination of the active array and the pending array, resolving the issue. To test this fix, antp0p used `Input.parse_(i forgor)` to trigger 4 different actions simultaneously within a single frame; the result was that only the "roll" action, which is with the highest priority, was triggered. A pretty solid test result.
 
-## 6. Why write this article?
+## 6. Why Write This Article?
 
 Every architecture - or anything that might not quite qualify as an architecture - has a reason for existing (except for that mess in Section 3; antp0p must have been half-asleep back then). For beginners, if-else is the most intuitive approach; there is no need to jump straight into FSMs. Action games, RPGs, and simulation games have different requirements; there is no need to build a *Monster Hunter* input pipeline for *Cookie Clicker*. Eventually antp0p found the solution that suits both antp0p the Lazy Dev and *The Ant Game* itself. Beyond the points mentioned above, the purpose of this article is also to summarize the lessons learned.
 

@@ -15,6 +15,7 @@ import BackButton from "./_components/BackButton.astro";
 import BackToTopButton from "./_components/BackToTopButton.astro";
 import AdjacentPostNav from "./_components/AdjacentPostNav.astro";
 import config from "@/config";
+import TableOfContents from "../../../components/TOC.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
@@ -73,7 +74,7 @@ const {
   hideEditPost,
 } = post.data;
 
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
 
 let ogImageUrl: string | undefined;
 
@@ -113,13 +114,14 @@ const ogImage = ogImageUrl
     class:list={["app-layout", { "mt-8": !config.features.showBackButton }]}
     data-pagefind-body
   >
+
     <h1
       style={{ viewTransitionName: toTransitionName(post.id) }}
       class="text-accent inline-block text-2xl font-bold sm:text-3xl"
     >
       {title}
     </h1>
-
+    
     <div class="my-2 flex items-center gap-2">
       <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
       <span
@@ -133,18 +135,24 @@ const ogImage = ogImageUrl
       </span>
       <EditPost {hideEditPost} {post} class="max-sm:hidden" />
     </div>
-
+    <div class="relative max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="hidden xl:block absolute -left-90 top-8 w-75 h-full">
+        <aside class="hidden lg:block lg:col-span-0 sticky text-lg top-4 overflow-y-auto pt-0 pr-2">
+          <TableOfContents headings={headings} />
+        </aside>
+      </div>
     <article
       id="article"
       class:list={[
         "mt-8 w-full",
         "app-prose max-w-app",
         "prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)",
+        "lg:col-span-12"
       ]}
     >
       <Content />
     </article>
-
+    </div>
     <hr class="my-8 border-dashed" />
 
     <EditPost class="sm:hidden" {hideEditPost} {post} />
