@@ -58,4 +58,4 @@ Freezes mobs outside the `Area2D`. OP?
 
 ## AttackMode
 
-Uses with `AttackParam`. Currently it's a mess but semi-works (recoil bug). To clean up or not to clean up...
+Uses with `AttackParam`. Currently it's a mess but semi-works (recoil bug).
